@@ -1,0 +1,50 @@
+:root {
+    --white: #fff;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 65.2%;
+    line-height: 1.6rem;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 95vw;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+input:focus {
+    outline: none;
+}
+input {
+    text-align: center;
+}

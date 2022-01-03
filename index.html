@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sounds of Universe</title>
+    <link rel="icon" href="https://img.icons8.com/ios/45/ffffff/planet.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a53c799d8a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main" class="main"> 
+        <!-- background blur video -->
+        <div class="background">
+            <img src="https://images.wallpaperscraft.com/image/single/planet_space_stars_127858_2560x1440.jpg" alt="#" class="background-image">
+        </div>
+        <div id="back" class="background">
+            <!-- <iframe id="vid-back" class="background-video background-video--ratio1" src="https://www.youtube.com/embed/6Fs9toQj5_c?autoplay&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            <!-- <iframe id="vid-back" class="background-video background-video--ratio1" src="https://www.youtube.com/embed/O5nlyrBH3FQ?autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="grid">
+                <nav class="nav">
+                    <ul class="logo">
+                        <li class="logo__icon">
+                            <img src="https://img.icons8.com/ios/45/ffffff/planet.png"/>
+                        </li>
+                        <li class="logo__name">Sounds of Universe</li>
+                    </ul>
+                    <ul class="info">
+                        <li class="info__icon">
+                            <i class="fab fa-facebook"></i>
+                        </li>
+                        <li class="info__name">
+                            <a class="info__name" href="https://www.facebook.com/profile.php?id=100062832902305">facebook</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- part 2 -->
+        <div id="cont" class="container">
+            <div>
+                <input id="link" class="input" placeholder="Insert your youtube's link here..." type="text">
+            </div>
+            <span class="tip">Please F11 for best feeling, hope u have a great day, love u :></span>
+            <div onclick="play()" class="button">
+                <div class="icon">
+                    <img src="https://img.icons8.com/ios-glyphs/22/ffffff/play--v1.png"/>
+                </div>
+                <span class="text">feel the sound</span>
+            </div>
+        </div>
+
+        <!-- video -->
+        <div id="music" class="box-video">
+            <!-- <iframe id="vid" class="video" src="https://www.youtube.com/embed/6Fs9toQj5_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+
+        <div class="func">
+            <img onclick="add()" class="reset-button" src="https://img.icons8.com/ios/25/ffffff/plus--v1.png"/>
+            <div class="ratio-select">
+                <img onclick="viewRatio()" class="ratio-button" src="https://img.icons8.com/ios/25/ffffff/aspect-ratio.png"/>
+                <ul class="ratio">
+                    <li onclick="setRatio0()" class="ratio-items">1:1</li>
+                    <li onclick="setRatio4()" class="ratio-items">4:3</li>
+                    <li onclick="setRatio1()" class="ratio-items">16:9</li>
+                    <li onclick="setRatio5()" class="ratio-items">16:10</li>
+                    <li onclick="setRatio2()" class="ratio-items">20.5:9</li>
+                    <li onclick="setRatio3()" class="ratio-items">21:9</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setRatio0() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio0');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.add('background-video--ratio0');
+        }
+
+        function setRatio1() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio1');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.add('background-video--ratio1');
+        }
+        function setRatio2() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio2');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.add('background-video--ratio1');
+        }
+        function setRatio3() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio3');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.add('background-video--ratio3');
+        }
+
+        function setRatio4() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio4');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.add('background-video--ratio4'); 
+        }
+
+        function setRatio5() {
+            var element1 = document.getElementById('vid');
+            element1.classList.remove('ratio0');
+            element1.classList.remove('ratio1');
+            element1.classList.remove('ratio2');
+            element1.classList.remove('ratio3');
+            element1.classList.remove('ratio4');
+            element1.classList.remove('ratio5');
+            element1.classList.add('ratio5');
+
+            var element2 = document.getElementById('vid-back');
+            element2.classList.remove('background-video--ratio0');
+            element2.classList.remove('background-video--ratio1');
+            element2.classList.remove('background-video--ratio3');
+            element2.classList.remove('background-video--ratio4');
+            element2.classList.add('background-video--ratio1');
+        }
+
+        function play(){
+            cont.classList.remove('container--fadeIn');
+            cont.classList.add('container--fadeOut');
+    
+            var url = document.getElementById("link").value;
+
+            const videoID = getId(url);
+
+            setTimeout(function() {
+                const mainVid = document.getElementById('music');
+                const music = document.createElement('div');
+                music.classList.add('box-video');
+                music.innerHTML = '<iframe id="vid" class="video ratio1" src="https://www.youtube.com/embed/' + videoID + '?autoplay=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                mainVid.appendChild(music);
+    
+                const mainBack = document.getElementById('back');
+                const back = document.createElement('div');
+                back.classList.add('background');
+                back.innerHTML = '<iframe id="vid-back" class="background-video background-video--ratio1" src="https://www.youtube.com/embed/' + videoID + '?autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                mainBack.appendChild(back);
+            },300);
+
+            setTimeout(function() {
+                cont.classList.add('container--index');
+            }, 500);
+        }
+
+        function add() {
+            cont.classList.remove('container--fadeOut');
+            cont.classList.remove('container--index');
+            cont.classList.add('container--fadeIn');
+
+            const mainVid = document.getElementById('vid');
+            mainVid.parentNode.removeChild(mainVid);
+
+            const mainBack = document.getElementById('vid-back');
+            mainBack.parentElement.removeChild(mainBack);
+
+            // location.reload();
+        }
+
+        function getId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+
+            return (match && match[2].length === 11)
+            ? match[2]
+            : null;
+        }
+
+    </script>
+
+</body>
+</html>
